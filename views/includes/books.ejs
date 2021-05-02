@@ -1,0 +1,31 @@
+<head><% include ../includes/header.ejs %>
+    </head>
+
+    <body>
+        <%- include ../includes/nav.ejs %>
+            <% if (books.length > 0) { %>
+                <div>
+                    <% for (let book of books) { %>
+                        <div>
+                            <div>
+                                <p>Book Title:
+                                    <%= book.title %>
+                                </p>
+                            </div>
+                            <div>
+                                <p>Summary:
+                                    <%= book.summary %>
+                                </p>
+                            </div>
+                            <br>
+                            <% } %>
+                                <div>
+                                    <a href="/">
+                                        <button class="btn">Add Another Book</button>
+                                    </a>
+                                </div>
+                        </div>
+                </div>
+                <% } else { %>
+                    <h1>Empty Record!</h1>
+                    <% } %>

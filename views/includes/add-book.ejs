@@ -1,0 +1,15 @@
+<% include ../includes/header.ejs %>
+</head>
+<body>
+    <%- include ../includes/nav.ejs %>
+
+    <main>
+        <form class="book-form" action="/add-book" method="POST">
+            <div class="form-control">
+                    <input type="text" name="title" id="title" placeholder="Enter Book Title Here"><br>
+                    <textarea name="summary" id="summary" placeholder="Enter Book Summary Here." cols="50" rows="7"></textarea><br>
+                    <p> <button type="submit">Submit Book</button><p></p>
+            </div>
+        </form>
+    </main>
+</body>
